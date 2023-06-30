@@ -30,7 +30,7 @@ const Renderer = (function () {
 
         createAddCommentElement.append(createCommentInput);
         createAddCommentElement.append(createAddCommentButton);
-        
+
         postElement.append(commentsElement);
         postElement.append(createAddCommentElement);
 
