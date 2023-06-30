@@ -65,6 +65,7 @@ body{
     color: #ecf0f1;
     background-color: #e74c3c;
     display: inline-block;
+    margin-left: 30px;
     padding: 5px;
     border-radius: 3px;
     font-size: 0.8em;
@@ -73,4 +74,5 @@ body{
 .delete-comment{
     cursor: pointer;
     color: #e74c3c;
+    margin-left: 30px;
 }
