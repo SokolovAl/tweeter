@@ -77,12 +77,21 @@ body{
 }
 
 .add-comment{
+    display: inline-block;
+    padding: 5px;
+}
+
+.add-comment-button{
     cursor: pointer;
     color: #ecf0f1;
-    background-color: #56a536;
+    background-color: #3498db;
     display: inline-block;
     margin-left: 30px;
     padding: 5px;
     border-radius: 3px;
     font-size: 0.8em;
+}
+
+.add-comment-button:active{
+    background-color: #2980b9
 }
