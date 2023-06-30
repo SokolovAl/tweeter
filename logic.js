@@ -52,10 +52,10 @@ const Tweeter = function () {
         }
     };
 
-    const removeComment = (postId, commentID) => {
+    const removeComment = (postId, commentId) => {
         const post = _posts.find((post) => post.id === postId);
         if (post) {
-            post.comments = post.comments.filter((comment) => comment.id !== commentID);
+            post.comments = post.comments.filter((comment) => comment.id !== commentId);
         }
     };
 

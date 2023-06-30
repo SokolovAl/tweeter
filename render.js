@@ -12,7 +12,7 @@ const Renderer = (function () {
     const createPostElement = (post) => {
         const postElement = $("<div>").addClass("post").attr("data-id", post.id);
 
-        const postTextElement = $("<h1>").addClass("post-text").text(post.text);
+        const postTextElement = $("<h2>").addClass("post-text").text(post.text);
         postElement.append(postTextElement);
 
         const commentsElement = $("<div>").addClass("comments");
