@@ -24,15 +24,10 @@ const Renderer = (function () {
             commentsElement.append(commentElement);
 
         });
-        const createAddCommentElement = $("<div>").addClass("add-comment");
-        const createCommentInput = $("<input>").attr("type", "text").attr("placeholder", "Comment this post");
-        const createAddCommentButton = $("<div>").text("Add Comment").addClass("add-comment-button");
-
-        createAddCommentElement.append(createCommentInput);
-        createAddCommentElement.append(createAddCommentButton);
-
         postElement.append(commentsElement);
-        postElement.append(createAddCommentElement);
+
+        const addCommentElement = createAddCommentElement();
+        postElement.append(addCommentElement);
 
         return postElement;
     };
@@ -58,6 +53,17 @@ const Renderer = (function () {
             deleteElement = $("<span>").addClass("delete-comment").text("X");
         }
         return deleteElement;
+    };
+
+    const createAddCommentElement = () => {
+        const addCommentElement = $("<div>").addClass("add-comment");
+        const commentInput = $("<input>").attr("type", "text").attr("placeholder", "Comment this post");
+        const addCommentButton = $("<div>").text("Add Comment").addClass("add-comment-button");
+
+        addCommentElement.append(commentInput);
+        addCommentElement.append(addCommentButton);
+
+        return addCommentElement;
     };
 
     return {
