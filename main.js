@@ -1,6 +1,7 @@
 $(document).ready(function () {
     const tweeter = Tweeter();
     const renderer = Renderer();
+    const postsList = $("#posts")
 
     //add post
     $("#post").click(() => {
@@ -18,7 +19,7 @@ $(document).ready(function () {
     });
 
     //delete post
-    $("#posts").on("click", ".delete", (event) => {
+    postsList.on("click", ".delete", (event) => {
         const postId = $(event.target).closest(".post").attr("data-id");
 
         tweeter.removePost(postId);
@@ -27,7 +28,7 @@ $(document).ready(function () {
     });
 
     //add comment
-    $("#posts").on("click", ".add-comment-button", (event) => {
+    postsList.on("click", ".add-comment-button", (event) => {
         const postId = $(event.target).closest(".post").attr("data-id");
         const commentText = $(event.target).closest(".post").find(".add-comment input").val();
         const commentInput = $(event.target).closest(".post").find(".add-comment input");
@@ -43,7 +44,7 @@ $(document).ready(function () {
     });
 
     //delete comment
-    $("#posts").on("click", ".delete-comment", (event) => {
+    postsList.on("click", ".delete-comment", (event) => {
         const postId = $(event.target).closest(".post").attr("data-id");
         const commentId = $(event.target).closest(".comment").attr("data-id");
 
