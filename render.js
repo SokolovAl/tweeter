@@ -24,12 +24,13 @@ const Renderer = (function () {
             commentsElement.append(commentElement);
 
         });
-        const createAddCommentElement = $("<div>");
+        const createAddCommentElement = $("<div>").addClass("add-comment");
         const createCommentInput = $("<input>").attr("type", "text").attr("placeholder", "Comment this post");
-        const createAddCommentButton = $("<div>").text("Add Comment").addClass("add-comment");
+        const createAddCommentButton = $("<div>").text("Add Comment").addClass("add-comment-button");
 
         createAddCommentElement.append(createCommentInput);
         createAddCommentElement.append(createAddCommentButton);
+        
         postElement.append(commentsElement);
         postElement.append(createAddCommentElement);
 
