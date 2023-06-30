@@ -24,7 +24,6 @@ const Renderer = (function () {
             commentsElement.append(commentElement);
 
         });
-
         postElement.append(commentsElement);
 
         return postElement;
@@ -50,7 +49,6 @@ const Renderer = (function () {
         } else if (context === "comment") {
             deleteElement = $("<span>").addClass("delete-comment").text("X");
         }
-
         return deleteElement;
     };
 
