@@ -24,7 +24,7 @@ const Tweeter = function () {
     let postIdCounter = 2;
     let commentIdCounter = 6;
 
-    const getPosts = () => _posts;
+    const getPosts = () => JSON.parse(JSON.stringify(_posts));
 
     const addPost = (text) => {
         postIdCounter++;
